@@ -77,4 +77,4 @@ jobs:
           $MINGW = $env:MINGW_64
         }
         $env:Path = "$MINGW;" + $env:Path
-        nox --session $env:NOX_SESSION
+        nox --session -lquadmath $env:NOX_SESSION
