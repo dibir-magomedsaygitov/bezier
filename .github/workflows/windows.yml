@@ -49,7 +49,8 @@ jobs:
     - name: Downgrade CMake
       shell: powershell
       run: |
-        choco uninstall cmake --version=3.19.4
+        $cmake = cmake --version
+        choco uninstall cmake --version=$cmakeversion
         choco install cmake --version=3.19.3 --installargs 'ADD_CMAKE_TO_PATH=System'
     - name: Show gfortran version
       shell: powershell
